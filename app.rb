@@ -8,6 +8,11 @@ get '/' do
 end
 
 get '/api/nodes' do
-   nodes = Store.database.command({:geoNear => 'nodes', :near => [params[:x].to_f, params[:y].to_f], :spherical => true, :num => 300})
-   JSON.generate(nodes['results'].map{|n| n['obj']})
+  bson = BSON::OrderedHash.new #for ruby 1.8
+  bson[:geoNear] = 'nodes'
+  bson[:near] = [params[:x].to_f, params[:y].to_f]
+  bson[:spherical] = true
+  bson[:num] = 300
+  nodes = Store.database.command(bson)
+  JSON.generate(nodes['results'].map{|n| n['obj']})
 end
