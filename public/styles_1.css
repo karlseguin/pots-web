@@ -3,5 +3,7 @@
 html,body{height:100%;margin:0;padding:0;font-family:verdana;font-size:0.8em;}
 #map{height:100%;width:100%;}
 #config{position:absolute;top:10px;left:10px;background:#fff;padding:10px;border:1px solid #333;-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;}
+#config a {display:block;text-align:center;margin-top:10px;color:#66f;text-decoration:none;}
+#config a:hover{color:#33C;}
 div.info > div{margin-bottom:5px;}
 div.info label{font-weight:bold;margin-right:10px;}
