@@ -20,7 +20,9 @@ module Store
   
   def self.handle_passenger_forking
     if defined?(PhusionPassenger)
-      @@mongo_connection.connect if forked
+      PhusionPassenger.on_event(:starting_worker_process) do |forked|
+        @@mongo_connection.connect if forked
+      end
     end
   end
 end
