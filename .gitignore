@@ -1,0 +1,4 @@
+Capfile
+deploy.rb
+public/*.gz
+.DS_Store

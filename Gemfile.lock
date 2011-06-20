@@ -1,0 +1,22 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    bson (1.3.1)
+    bson_ext (1.3.1)
+    mongo (1.3.1)
+      bson (>= 1.3.1)
+    mongo_ext (0.19.3)
+    rack (1.3.0)
+    sinatra (1.2.6)
+      rack (~> 1.1)
+      tilt (< 2.0, >= 1.2.2)
+    tilt (1.3.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bson_ext
+  mongo
+  mongo_ext
+  sinatra
